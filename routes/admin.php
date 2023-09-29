@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AboutController;
+use App\Http\Controllers\Admin\FactController;
 use App\Http\Controllers\Admin\NameController;
 use App\Http\Controllers\Admin\PhotoController;
 use App\Http\Controllers\Admin\RoleController;
@@ -54,6 +55,10 @@ Route::group(['prefix' => 'admin'], function () {
 
         Route::get('/about', [AboutController::class, 'index'])->name('about');
         Route::post('/about/update', [AboutController::class, 'update'])->name('about-update');
+
+
+        Route::get('/fact', [FactController::class, 'index'])->name('fact');
+        Route::post('/fact/update', [FactController::class, 'update'])->name('fact-update');
 
     });
 });
