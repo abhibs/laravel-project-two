@@ -55,7 +55,7 @@
                         <li>
                             <a href="#sidebarEcommerce" data-bs-toggle="collapse">
                                 <i class="mdi mdi-cart-outline"></i>
-                                <span> Profile </span>
+                                <span> Name </span>
                                 <span class="menu-arrow"></span>
                             </a>
                             <div class="collapse" id="sidebarEcommerce">
@@ -63,6 +63,20 @@
                                     <li>
                                         <a href="{{ route('name') }}">Name Update</a>
                                     </li>
+
+
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li>
+                            <a href="#sidebarCrm" data-bs-toggle="collapse">
+                                <i class="mdi mdi-account-multiple-outline"></i>
+                                <span> Photo </span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <div class="collapse" id="sidebarCrm">
+                                <ul class="nav-second-level">
                                     <li>
                                         <a href="{{ route('photo') }}">Photo Update</a>
                                     </li>
@@ -72,37 +86,18 @@
                         </li>
 
                         <li>
-                            <a href="#sidebarCrm" data-bs-toggle="collapse">
-                                <i class="mdi mdi-account-multiple-outline"></i>
-                                <span> CRM </span>
-                                <span class="menu-arrow"></span>
-                            </a>
-                            <div class="collapse" id="sidebarCrm">
-                                <ul class="nav-second-level">
-                                    <li>
-                                        <a href="crm-dashboard.html">Dashboard</a>
-                                    </li>
-                                    <li>
-                                        <a href="crm-contacts.html">Contacts</a>
-                                    </li>
-
-                                </ul>
-                            </div>
-                        </li>
-
-                        <li>
                             <a href="#sidebarEmail" data-bs-toggle="collapse">
                                 <i class="mdi mdi-email-multiple-outline"></i>
-                                <span> Email </span>
+                                <span> Roles </span>
                                 <span class="menu-arrow"></span>
                             </a>
                             <div class="collapse" id="sidebarEmail">
                                 <ul class="nav-second-level">
                                     <li>
-                                        <a href="email-inbox.html">Inbox</a>
+                                        <a href="{{ route('role-create') }}">Add Role</a>
                                     </li>
                                     <li>
-                                        <a href="email-read.html">Read Email</a>
+                                        <a href="{{ route('role') }}">All Roles</a>
                                     </li>
 
                                 </ul>
