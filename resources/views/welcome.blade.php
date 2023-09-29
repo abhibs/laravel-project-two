@@ -45,11 +45,9 @@
                     height="104px">
                 <h1 class="text-light"><a href="index.html">{{ $name->name }}</a></h1>
                 <div class="social-links mt-3 text-center">
-                    <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                    <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                    <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                    <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                    <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                    @foreach ($socials as $item)
+                        <a href="{{ $item->url }}" target="_blank"><i class="{{ $item->icon }}"></i></a>
+                    @endforeach
                 </div>
             </div>
 
