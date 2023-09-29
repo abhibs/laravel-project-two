@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\About;
 use App\Models\Name;
 use App\Models\Photo;
 use App\Models\Role;
@@ -16,7 +17,8 @@ class HomeController extends Controller
         $photo = Photo::find(1);
         $roles = Role::where('status', 1)->latest()->get();
         $socials = Social::where('status', 1)->get();
+        $about = About::find(1);
 
-        return view('welcome', compact('name', 'photo', 'roles', 'socials'));
+        return view('welcome', compact('name', 'photo', 'roles', 'socials', 'about'));
     }
 }
