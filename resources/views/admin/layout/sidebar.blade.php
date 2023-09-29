@@ -64,7 +64,7 @@
                                         <a href="{{ route('name') }}">Name Update</a>
                                     </li>
                                     <li>
-                                        <a href="ecommerce-products.html">Products</a>
+                                        <a href="{{ route('photo') }}">Photo Update</a>
                                     </li>
 
                                 </ul>

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\NameController;
+use App\Http\Controllers\Admin\PhotoController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminController;
 
@@ -23,6 +24,10 @@ Route::group(['prefix' => 'admin'], function () {
 
         Route::get('/name', [NameController::class, 'index'])->name('name');
         Route::post('/name/update', [NameController::class, 'update'])->name('name-update');
+
+
+        Route::get('/profile/photo', [PhotoController::class, 'index'])->name('photo');
+        Route::post('/profile/photo/update', [PhotoController::class, 'update'])->name('photo-update');
 
     });
 });

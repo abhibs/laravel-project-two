@@ -41,8 +41,8 @@
         <div class="d-flex flex-column">
 
             <div class="profile">
-                <img src="{{ asset('user/assets/img/profile-img.jpg') }}" alt=""
-                    class="img-fluid rounded-circle">
+                <img src="{{ asset($photo->image) }}" alt="" class="img-fluid rounded-circle" width="104px"
+                    height="104px">
                 <h1 class="text-light"><a href="index.html">{{ $name->name }}</a></h1>
                 <div class="social-links mt-3 text-center">
                     <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
@@ -73,7 +73,8 @@
     </header><!-- End Header -->
 
     <!-- ======= Hero Section ======= -->
-    <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+    <section id="hero" class="d-flex flex-column justify-content-center align-items-center"
+        style="width: 100%; height: 100vh; background: url({{ asset($photo->image) }}) top center no-repeat;">
         <div class="hero-container" data-aos="fade-in">
             <h1>{{ $name->name }}</h1>
             <p>I'm <span class="typed" data-typed-items="Designer, Developer, Freelancer, Photographer"></span></p>
