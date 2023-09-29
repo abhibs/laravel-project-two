@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AboutController;
 use App\Http\Controllers\Admin\NameController;
 use App\Http\Controllers\Admin\PhotoController;
 use App\Http\Controllers\Admin\RoleController;
@@ -49,6 +50,10 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/social/media/delete/{id}', [SocialController::class, 'delete'])->name('social-delete');
         Route::get('/social/media/inactive/{id}', [SocialController::class, 'inactive'])->name('social-inactive');
         Route::get('/social/media/active/{id}', [SocialController::class, 'active'])->name('social-active');
+
+
+        Route::get('/about', [AboutController::class, 'index'])->name('about');
+        Route::post('/about/update', [AboutController::class, 'update'])->name('about-update');
 
     });
 });
