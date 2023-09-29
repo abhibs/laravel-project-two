@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\NameController;
 use App\Http\Controllers\Admin\PhotoController;
 use App\Http\Controllers\Admin\RoleController;
+use App\Http\Controllers\Admin\SocialController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminController;
 
@@ -38,6 +39,16 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/role/delete/{id}', [RoleController::class, 'delete'])->name('role-delete');
         Route::get('/role/inactive/{id}', [RoleController::class, 'inactive'])->name('role-inactive');
         Route::get('/role/active/{id}', [RoleController::class, 'active'])->name('role-active');
+
+
+        Route::get('/social/media/create', [SocialController::class, 'create'])->name('social-create');
+        Route::post('/social/media/store', [SocialController::class, 'store'])->name('social-store');
+        Route::get('/social/media', [SocialController::class, 'index'])->name('social');
+        Route::get('/social/media/edit/{id}', [SocialController::class, 'edit'])->name('social-edit');
+        Route::post('/social/media/update', [SocialController::class, 'update'])->name('social-update');
+        Route::get('/social/media/delete/{id}', [SocialController::class, 'delete'])->name('social-delete');
+        Route::get('/social/media/inactive/{id}', [SocialController::class, 'inactive'])->name('social-inactive');
+        Route::get('/social/media/active/{id}', [SocialController::class, 'active'])->name('social-active');
 
     });
 });
