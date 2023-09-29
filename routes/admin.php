@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\NameController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminController;
 
@@ -20,6 +21,8 @@ Route::group(['prefix' => 'admin'], function () {
 
         Route::post('/update/password', [AdminController::class, 'updatePassword'])->name('admin-password-update');
 
+        Route::get('/name', [NameController::class, 'index'])->name('name');
+        Route::post('/name/update', [NameController::class, 'update'])->name('name-update');
 
     });
 });
