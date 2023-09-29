@@ -77,7 +77,7 @@
         style="width: 100%; height: 100vh; background: url({{ asset($photo->image) }}) top center no-repeat;">
         <div class="hero-container" data-aos="fade-in">
             <h1>{{ $name->name }}</h1>
-            <p>I'm <span class="typed" data-typed-items="Designer, Developer, Freelancer, Photographer"></span></p>
+            <p>I'm <span class="typed" data-typed-items="{{ $roles->implode('name', ', ') }}"></span></p>
         </div>
     </section><!-- End Hero -->
 
