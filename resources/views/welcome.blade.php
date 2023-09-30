@@ -253,66 +253,15 @@
                     </div>
                     <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
                         <h3 class="resume-title">Professional Experience</h3>
-                        <div class="resume-item">
-                            <h4>Bloom IT Solution</h4>
-                            <h5>01 July 2023 - 08 August 2023</h5>
-                            <p><em> Kormangala, Banglore, Karnataka</em></p>
-                            <h5>Tours and Travel Project</h5>
-                            <ul>
-                                <li>Designed and developed web applications using the Laravel PHP
-                                    framework, with the help of HTML, CSS, bootstrap and JavaScript
-                                    to create dynamic and engaging user interfaces.</li>
-                                <li>Expert in both front-end and back-end API development.</li>
-                            </ul>
-                        </div>
+                        @foreach ($experiences as $item)
+                            <div class="resume-item">
+                                <h4>{{ $item->name }}</h4>
+                                <h5>{{ $item->year }}</h5>
+                                <p><em> {{ $item->location }}</em></p>
+                                {!! $item->content !!}
+                            </div>
+                        @endforeach
 
-                        <div class="resume-item">
-                            <h4>Web Digital Mantra IT Service Private Limited</h4>
-                            <h5>22 October 2022 to 30 June 2023</h5>
-                            <p><em> Kumarswamy Layout, Banglore, Karnataka </em></p>
-                            <h5>KN Patel, Safetalk Acadamy, World Wide Matrimony, Amma Marata
-                                Matrimony, City Report, Semisabhina, Beloorbayir Biotech, Jpn Pharma, Shree
-                                Vinayaka Chemex and VPL</h5>
-                            <ul>
-                                <li>Designed and developed web applications using the Laravel PHP
-                                    framework, with the help of HTML, CSS, bootstrap and JavaScript
-                                    to create dynamic and engaging user interfaces.</li>
-                                <li>Expert in both front-end and back-end API development.</li>
-                                <li>Specialize in crafting responsive designs that seamlessly adapt to
-                                    desktop and mobile devices with an exceptional user experience
-                                    across the platforms.</li>
-                                <li>Successfully developed and maintained APIs for both mobile and
-                                    web applications, facilitating eﬃcient data exchange and
-                                    interoperability.</li>
-                                <li>Version control tools includes Git, enabling management of source
-                                    code changes, fostering collaborative development and
-                                    maintaining code consistency.</li>
-                                <li>Well-versed in utilizing MySQL to eﬀectively manage databases,
-                                    including performing data migrations to ensure optimal data
-                                    organization and accessibility.</li>
-                                <li>Actively engage with cross-functional teams to devise eﬃcient
-                                    solutions for complex challenges.</li>
-                                <li>Quality is exempliﬁed through code reviews and constructive
-                                    feedback, ensuring that the code-base consistently meets high
-                                    standards and delivers optimal performance.</li>
-                            </ul>
-                        </div>
-
-                        <div class="resume-item">
-                            <h4>Chipsy IT Service Private Limited</h4>
-                            <h5>15 December 2021 to 31 May 2022</h5>
-                            <p><em> Kalsanka, Bhakta tower, Upupi, Karnataka</em></p>
-                            <h5>Abharan Jewellery and Popular Gold</h5>
-                            <ul>
-                                <li>Version control tools includes Git, enabling management of source
-                                    code changes, fostering collaborative development and
-                                    maintaining code consistency.</li>
-                                <li>Designed and developed web applications using the Lumen PHP
-                                    framework, with the help of HTML, CSS, bootstrap and JavaScript
-                                    to create dynamic and engaging user interfaces.</li>
-                                <li>Expert in both front-end and back-end API development.</li>
-                            </ul>
-                        </div>
 
                     </div>
                 </div>
