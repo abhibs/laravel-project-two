@@ -9,6 +9,7 @@ use App\Models\Experience;
 use App\Models\Fact;
 use App\Models\Name;
 use App\Models\Photo;
+use App\Models\Review;
 use App\Models\Role;
 use App\Models\Skill;
 use App\Models\Social;
@@ -28,7 +29,9 @@ class HomeController extends Controller
         $educations = Education::where('status', 1)->get();
         $experiences = Experience::where('status', 1)->get();
         $certificates = Certificate::where('status', 1)->inRandomOrder()->get();
+        $reviews = Review::where('status', 1)->get();
 
-        return view('welcome', compact('name', 'photo', 'roles', 'socials', 'about', 'fact', 'skills', 'educations', 'experiences', 'certificates'));
+
+        return view('welcome', compact('name', 'photo', 'roles', 'socials', 'about', 'fact', 'skills', 'educations', 'experiences', 'certificates', 'reviews'));
     }
 }
