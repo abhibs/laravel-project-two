@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\About;
+use App\Models\Education;
 use App\Models\Fact;
 use App\Models\Name;
 use App\Models\Photo;
@@ -22,7 +23,8 @@ class HomeController extends Controller
         $about = About::find(1);
         $fact = Fact::find(1);
         $skills = Skill::where('status', 1)->get();
+        $educations = Education::where('status', 1)->get();
 
-        return view('welcome', compact('name', 'photo', 'roles', 'socials', 'about', 'fact', 'skills'));
+        return view('welcome', compact('name', 'photo', 'roles', 'socials', 'about', 'fact', 'skills', 'educations'));
     }
 }
