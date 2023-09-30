@@ -257,48 +257,19 @@
                             </div>
                         </li>
 
-
-
-
-                        <li>
-                            <a href="#sidebarExtendedui" data-bs-toggle="collapse">
-                                <i class="mdi mdi-layers-outline"></i>
-                                <span class="badge bg-info float-end">Hot</span>
-                                <span> Extended UI </span>
-                            </a>
-                            <div class="collapse" id="sidebarExtendedui">
-                                <ul class="nav-second-level">
-                                    <li>
-                                        <a href="extended-nestable.html">Nestable List</a>
-                                    </li>
-                                    <li>
-                                        <a href="extended-range-slider.html">Range Slider</a>
-                                    </li>
-
-                                </ul>
-                            </div>
-                        </li>
-
-                        <li>
-                            <a href="widgets.html">
-                                <i class="mdi mdi-gift-outline"></i>
-                                <span> Widgets </span>
-                            </a>
-                        </li>
-
                         <li>
                             <a href="#sidebarIcons" data-bs-toggle="collapse">
                                 <i class="mdi mdi-bullseye"></i>
-                                <span> Icons </span>
+                                <span> Certificate </span>
                                 <span class="menu-arrow"></span>
                             </a>
                             <div class="collapse" id="sidebarIcons">
                                 <ul class="nav-second-level">
                                     <li>
-                                        <a href="icons-material-symbols.html">Material Symbols Icons</a>
+                                        <a href="{{ route('certificate-create') }}">Add Certificate</a>
                                     </li>
                                     <li>
-                                        <a href="icons-two-tone.html">Two Tone Icons</a>
+                                        <a href="{{ route('certificate') }}">All Certificates</a>
                                     </li>
 
                                 </ul>

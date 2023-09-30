@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\AboutController;
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\CertificateController;
 use App\Http\Controllers\Admin\EducationController;
 use App\Http\Controllers\Admin\ExperienceController;
 use App\Http\Controllers\Admin\FactController;
@@ -111,6 +112,16 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/project/delete/{id}', [ProjectController::class, 'delete'])->name('project-delete');
         Route::get('/project/inactive/{id}', [ProjectController::class, 'inactive'])->name('project-inactive');
         Route::get('/project/active/{id}', [ProjectController::class, 'active'])->name('project-active');
+
+
+        Route::get('/certificate/create', [CertificateController::class, 'create'])->name('certificate-create');
+        Route::post('/certificate/store', [CertificateController::class, 'store'])->name('certificate-store');
+        Route::get('/certificate', [CertificateController::class, 'index'])->name('certificate');
+        Route::get('/certificate/edit/{id}', [CertificateController::class, 'edit'])->name('certificate-edit');
+        Route::post('/certificate/update', [CertificateController::class, 'update'])->name('certificate-update');
+        Route::get('/certificate/delete/{id}', [CertificateController::class, 'delete'])->name('certificate-delete');
+        Route::get('/certificate/inactive/{id}', [CertificateController::class, 'inactive'])->name('certificate-inactive');
+        Route::get('/certificate/active/{id}', [CertificateController::class, 'active'])->name('certificate-active');
 
     });
 });

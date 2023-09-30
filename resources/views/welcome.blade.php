@@ -60,9 +60,9 @@
                     <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i>
                             <span>Resume</span></a></li>
                     <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i>
-                            <span>Portfolio</span></a></li>
+                            <span>Project</span></a></li>
                     <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i>
-                            <span>Services</span></a></li>
+                            <span>Certifcate</span></a></li>
                     <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i>
                             <span>Contact</span></a></li>
                 </ul>
@@ -272,7 +272,7 @@
         @php
             $projectdatas = App\Models\Project::where('status', 1)->get();
             $categories = App\Models\Category::orderBy('name', 'ASC')->get();
-            
+
         @endphp
 
         <!-- ======= Project Section ======= -->
@@ -333,49 +333,61 @@
             <div class="container">
 
                 <div class="section-title">
-                    <h2>Services</h2>
-                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit
-                        sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias
-                        ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+                    <h2>Certificates</h2>
+
                 </div>
 
                 <div class="row">
                     <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
-                        <div class="icon"><i class="bi bi-briefcase"></i></div>
-                        <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-                        <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias
-                            excepturi sint occaecati cupiditate non provident</p>
+
+                        <img src="{{ asset('user/assets/img/certifacate/certificate-1.jpg') }}" width="350"
+                            height="350" alt="">
+
                     </div>
-                    <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-                        <div class="icon"><i class="bi bi-card-checklist"></i></div>
-                        <h4 class="title"><a href="">Dolor Sitema</a></h4>
-                        <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                            ex ea commodo consequat tarad limino ata</p>
+
+                    <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
+
+                        <img src="{{ asset('user/assets/img/certifacate/certificate-1.jpg') }}" width="350"
+                            height="350" alt="">
+
                     </div>
-                    <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-                        <div class="icon"><i class="bi bi-bar-chart"></i></div>
-                        <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-                        <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-                            dolore eu fugiat nulla pariatur</p>
+                    <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
+
+                        <img src="{{ asset('user/assets/img/certifacate/certificate-1.jpg') }}" width="350"
+                            height="350" alt="">
+
                     </div>
-                    <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
-                        <div class="icon"><i class="bi bi-binoculars"></i></div>
-                        <h4 class="title"><a href="">Magni Dolores</a></h4>
-                        <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                            officia deserunt mollit anim id est laborum</p>
+                    <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
+
+                        <img src="{{ asset('user/assets/img/certifacate/certificate-1.jpg') }}" width="350"
+                            height="350" alt="">
+
                     </div>
-                    <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
-                        <div class="icon"><i class="bi bi-brightness-high"></i></div>
-                        <h4 class="title"><a href="">Nemo Enim</a></h4>
-                        <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                            blanditiis praesentium voluptatum deleniti atque</p>
+                    <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
+
+                        <img src="{{ asset('user/assets/img/certifacate/certificate-1.jpg') }}" width="350"
+                            height="350" alt="">
+
                     </div>
-                    <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
-                        <div class="icon"><i class="bi bi-calendar4-week"></i></div>
-                        <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
-                        <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero
-                            tempore, cum soluta nobis est eligendi</p>
+                    <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
+
+                        <img src="{{ asset('user/assets/img/certifacate/certificate-1.jpg') }}" width="350"
+                            height="350" alt="">
+
                     </div>
+                    <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
+
+                        <img src="{{ asset('user/assets/img/certifacate/certificate-1.jpg') }}" width="350"
+                            height="350" alt="">
+
+                    </div>
+                    <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
+
+                        <img src="{{ asset('user/assets/img/certifacate/certificate-1.jpg') }}" width="350"
+                            height="350" alt="">
+
+                    </div>
+
                 </div>
 
             </div>
@@ -386,10 +398,8 @@
             <div class="container">
 
                 <div class="section-title">
-                    <h2>Testimonials</h2>
-                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit
-                        sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias
-                        ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+                    <h2>Reviews</h2>
+
                 </div>
 
                 <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
@@ -443,37 +453,7 @@
                             </div>
                         </div><!-- End testimonial item -->
 
-                        <div class="swiper-slide">
-                            <div class="testimonial-item" data-aos="fade-up" data-aos-delay="300">
-                                <p>
-                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                    Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim
-                                    fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem
-                                    dolore labore illum veniam.
-                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                </p>
-                                <img src="{{ asset('user/assets/img/testimonials/testimonials-4.jpg') }}"
-                                    class="testimonial-img" alt="">
-                                <h3>Matt Brandon</h3>
-                                <h4>Freelancer</h4>
-                            </div>
-                        </div><!-- End testimonial item -->
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-item" data-aos="fade-up" data-aos-delay="400">
-                                <p>
-                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                    Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster
-                                    veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam
-                                    culpa fore nisi cillum quid.
-                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                </p>
-                                <img src="{{ asset('user/assets/img/testimonials/testimonials-5.jpg') }}"
-                                    class="testimonial-img" alt="">
-                                <h3>John Larson</h3>
-                                <h4>Entrepreneur</h4>
-                            </div>
-                        </div><!-- End testimonial item -->
+                        
 
                     </div>
                     <div class="swiper-pagination"></div>
@@ -488,9 +468,7 @@
 
                 <div class="section-title">
                     <h2>Contact</h2>
-                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit
-                        sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias
-                        ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+
                 </div>
 
                 <div class="row" data-aos="fade-in">
