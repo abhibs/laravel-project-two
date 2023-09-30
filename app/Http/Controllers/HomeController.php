@@ -7,6 +7,7 @@ use App\Models\Fact;
 use App\Models\Name;
 use App\Models\Photo;
 use App\Models\Role;
+use App\Models\Skill;
 use App\Models\Social;
 use Illuminate\Http\Request;
 
@@ -20,7 +21,8 @@ class HomeController extends Controller
         $socials = Social::where('status', 1)->get();
         $about = About::find(1);
         $fact = Fact::find(1);
+        $skills = Skill::where('status', 1)->get();
 
-        return view('welcome', compact('name', 'photo', 'roles', 'socials', 'about', 'fact'));
+        return view('welcome', compact('name', 'photo', 'roles', 'socials', 'about', 'fact', 'skills'));
     }
 }
