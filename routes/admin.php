@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AboutController;
+use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\EducationController;
 use App\Http\Controllers\Admin\ExperienceController;
 use App\Http\Controllers\Admin\FactController;
@@ -93,5 +94,12 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/experience/inactive/{id}', [ExperienceController::class, 'inactive'])->name('experience-inactive');
         Route::get('/experience/active/{id}', [ExperienceController::class, 'active'])->name('experience-active');
 
+
+        Route::get('/category/create', [CategoryController::class, 'create'])->name('category-create');
+        Route::post('/category/store', [CategoryController::class, 'store'])->name('category-store');
+        Route::get('/category', [CategoryController::class, 'index'])->name('category');
+        Route::get('/category/edit/{id}', [CategoryController::class, 'edit'])->name('category-edit');
+        Route::post('/category/update', [CategoryController::class, 'update'])->name('category-update');
+        Route::get('/category/delete/{id}', [CategoryController::class, 'delete'])->name('category-delete');
     });
 });

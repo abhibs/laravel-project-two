@@ -216,7 +216,24 @@
                                 </ul>
                             </div>
                         </li>
+                        <li>
+                            <a href="#sidebarBaseui" data-bs-toggle="collapse">
+                                <i class="mdi mdi-black-mesa"></i>
+                                <span> Category </span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <div class="collapse" id="sidebarBaseui">
+                                <ul class="nav-second-level">
+                                    <li>
+                                        <a href="{{ route('category-create') }}">Add Category</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('category') }}">All Category</a>
+                                    </li>
 
+                                </ul>
+                            </div>
+                        </li>
                         <li>
                             <a href="#sidebarLayouts" data-bs-toggle="collapse">
                                 <i class="mdi mdi-cellphone-link"></i>
@@ -237,24 +254,7 @@
                         </li>
 
 
-                        <li>
-                            <a href="#sidebarBaseui" data-bs-toggle="collapse">
-                                <i class="mdi mdi-black-mesa"></i>
-                                <span> Base UI </span>
-                                <span class="menu-arrow"></span>
-                            </a>
-                            <div class="collapse" id="sidebarBaseui">
-                                <ul class="nav-second-level">
-                                    <li>
-                                        <a href="ui-buttons.html">Buttons</a>
-                                    </li>
-                                    <li>
-                                        <a href="ui-cards.html">Cards</a>
-                                    </li>
 
-                                </ul>
-                            </div>
-                        </li>
 
                         <li>
                             <a href="#sidebarExtendedui" data-bs-toggle="collapse">
