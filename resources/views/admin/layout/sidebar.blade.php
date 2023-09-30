@@ -279,16 +279,16 @@
                         <li>
                             <a href="#sidebarForms" data-bs-toggle="collapse">
                                 <i class="mdi mdi-bookmark-multiple-outline"></i>
-                                <span> Forms </span>
+                                <span> Reviews </span>
                                 <span class="menu-arrow"></span>
                             </a>
                             <div class="collapse" id="sidebarForms">
                                 <ul class="nav-second-level">
                                     <li>
-                                        <a href="forms-elements.html">General Elements</a>
+                                        <a href="{{ route('review-create') }}">Add Reviews</a>
                                     </li>
                                     <li>
-                                        <a href="forms-advanced.html">Advanced</a>
+                                        <a href="{{ route('review') }}">All Reviews</a>
                                     </li>
 
                                 </ul>

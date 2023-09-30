@@ -11,11 +11,11 @@
                     <div class="page-title-box">
                         <div class="page-title-right">
                             <ol class="breadcrumb m-0">
-                                <a href="{{ route('project-create') }}" class="btn btn-blue waves-effect waves-light">Add
-                                    Project</a>
+                                <a href="{{ route('review-create') }}" class="btn btn-blue waves-effect waves-light">Add
+                                    Review</a>
                             </ol>
                         </div>
-                        <h4 class="page-title">Project All </h4>
+                        <h4 class="page-title">Review All </h4>
                     </div>
                 </div>
             </div>
@@ -31,11 +31,10 @@
                                 <thead>
                                     <tr>
                                         <th>Sl</th>
-                                        <th>Category Name</th>
-                                        <th>Name</th>
-                                        <th>Image</th>
-                                        <th>Url</th>
-                                        <th>Status </th>
+                                        <th>Company Image </th>
+                                        <th>Company Name </th>
+                                        <th>Company CEO </th>
+                                        <th>Review Status </th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
@@ -45,12 +44,11 @@
                                     @foreach ($datas as $key => $item)
                                         <tr>
                                             <td> {{ $key + 1 }} </td>
-                                            <td>{{ $item->category->name }}</td>
-                                            <td>{{ $item->name }}</td>
-                                            <td> <img src="{{ asset($item->image) }}" style="width: 60px; height: 50px;"></td>
+                                            <td> <img src="{{ asset($item->image) }}" style="width: 60px; height: 50px;">
+                                            </td>
+                                            <td>{{ $item->company }}</td>
+                                            <td>{{ $item->ceo }}</td>
 
-                                            <td><a href="{{ $item->url }}"
-                                                    target="_blank">{{ Str::limit($item->url, 30) }}</a></td>
 
                                             <td>
                                                 @if ($item->status == 1)
@@ -62,17 +60,17 @@
 
                                             </td>
                                             <td>
-                                                <a href="{{ route('project-edit', $item->id) }}"
+                                                <a href="{{ route('review-edit', $item->id) }}"
                                                     class="btn btn-primary rounded-pill waves-effect waves-light">Edit</a>
-                                                <a href="{{ route('project-delete', $item->id) }}"
+                                                <a href="{{ route('review-delete', $item->id) }}"
                                                     class="btn btn-danger rounded-pill waves-effect waves-light"
                                                     id="delete">Delete</a>
                                                 @if ($item->status == 1)
-                                                    <a href="{{ route('project-inactive', $item->id) }}"
+                                                    <a href="{{ route('review-inactive', $item->id) }}"
                                                         class="btn btn-primary rounded-pill waves-effect waves-light"
                                                         title="Inactive"><i class="fa-solid fa-thumbs-down"></i> </a>
                                                 @else
-                                                    <a href="{{ route('project-active', $item->id) }}"
+                                                    <a href="{{ route('review-active', $item->id) }}"
                                                         class="btn btn-primary rounded-pill waves-effect waves-light"
                                                         title="Active"><i class="fa-solid fa-thumbs-up"></i></a>
                                                 @endif
