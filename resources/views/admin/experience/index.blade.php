@@ -11,7 +11,7 @@
                     <div class="page-title-box">
                         <div class="page-title-right">
                             <ol class="breadcrumb m-0">
-                                <a href="{{ route('education-create') }}" class="btn btn-blue waves-effect waves-light">Add
+                                <a href="{{ route('experience-create') }}" class="btn btn-blue waves-effect waves-light">Add
                                     Education</a>
                             </ol>
                         </div>
@@ -31,10 +31,9 @@
                                 <thead>
                                     <tr>
                                         <th>Sl</th>
-                                        <th>Education Name </th>
-                                        <th>Education Year </th>
-                                        <th>Percentage Got </th>
-                                        <th>Collage Name </th>
+                                        <th>Company Name </th>
+                                        <th>Experience Year </th>
+                                        <th> Location </th>
                                         <th> Status </th>
                                         <th>Action</th>
                                     </tr>
@@ -44,11 +43,10 @@
                                 <tbody>
                                     @foreach ($datas as $key => $item)
                                         <tr>
-                                            <td>{{ $key + 1 }}</td>
+                                            <td> {{ $key + 1 }} </td>
                                             <td>{{ $item->name }}</td>
                                             <td>{{ $item->year }}</td>
-                                            <td>{{ $item->percentage }} % </td>
-                                            <td>{{ $item->collage }}</td>
+                                            <td>{{ $item->location }}</td>
 
                                             <td>
                                                 @if ($item->status == 1)
@@ -60,17 +58,17 @@
 
                                             </td>
                                             <td>
-                                                <a href="{{ route('education-edit', $item->id) }}"
+                                                <a href="{{ route('experience-edit', $item->id) }}"
                                                     class="btn btn-primary rounded-pill waves-effect waves-light">Edit</a>
-                                                <a href="{{ route('education-delete', $item->id) }}"
+                                                <a href="{{ route('experience-delete', $item->id) }}"
                                                     class="btn btn-danger rounded-pill waves-effect waves-light"
                                                     id="delete">Delete</a>
                                                 @if ($item->status == 1)
-                                                    <a href="{{ route('education-inactive', $item->id) }}"
+                                                    <a href="{{ route('experience-inactive', $item->id) }}"
                                                         class="btn btn-primary rounded-pill waves-effect waves-light"
                                                         title="Inactive"><i class="fa-solid fa-thumbs-down"></i> </a>
                                                 @else
-                                                    <a href="{{ route('education-active', $item->id) }}"
+                                                    <a href="{{ route('experience-active', $item->id) }}"
                                                         class="btn btn-primary rounded-pill waves-effect waves-light"
                                                         title="Active"><i class="fa-solid fa-thumbs-up"></i></a>
                                                 @endif

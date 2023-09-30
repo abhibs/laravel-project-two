@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\AboutController;
 use App\Http\Controllers\Admin\EducationController;
+use App\Http\Controllers\Admin\ExperienceController;
 use App\Http\Controllers\Admin\FactController;
 use App\Http\Controllers\Admin\NameController;
 use App\Http\Controllers\Admin\PhotoController;
@@ -81,6 +82,16 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/education/delete/{id}', [EducationController::class, 'delete'])->name('education-delete');
         Route::get('/education/inactive/{id}', [EducationController::class, 'inactive'])->name('education-inactive');
         Route::get('/education/active/{id}', [EducationController::class, 'active'])->name('education-active');
+
+
+        Route::get('/experience/create', [ExperienceController::class, 'create'])->name('experience-create');
+        Route::post('/experience/store', [ExperienceController::class, 'store'])->name('experience-store');
+        Route::get('/experience', [ExperienceController::class, 'index'])->name('experience');
+        Route::get('/experience/edit/{id}', [ExperienceController::class, 'edit'])->name('experience-edit');
+        Route::post('/experience/update', [ExperienceController::class, 'update'])->name('experience-update');
+        Route::get('/experience/delete/{id}', [ExperienceController::class, 'delete'])->name('experience-delete');
+        Route::get('/experience/inactive/{id}', [ExperienceController::class, 'inactive'])->name('experience-inactive');
+        Route::get('/experience/active/{id}', [ExperienceController::class, 'active'])->name('experience-active');
 
     });
 });
