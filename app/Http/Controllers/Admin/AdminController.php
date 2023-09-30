@@ -5,8 +5,12 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Auth;
-use Image;
+use Intervention\Image\Facades\Image;
 use Illuminate\Support\Facades\Hash;
+use App\Models\Project;
+use App\Models\Certificate;
+use App\Models\Experience;
+use App\Models\Contact;
 
 class AdminController extends Controller
 {
@@ -38,7 +42,11 @@ class AdminController extends Controller
     }
     public function dashboard()
     {
-        return view('admin.index');
+        $projectCount = Project::where('status', 1)->count();
+        $certificateCount = Certificate::where('status', 1)->count();
+        $experienceCount = Experience::where('status', 1)->count();
+        $contactCount = Contact::count();
+        return view('admin.index', compact('projectCount', 'certificateCount', 'experienceCount', 'contactCount'));
     }
 
     public function adminLogout()

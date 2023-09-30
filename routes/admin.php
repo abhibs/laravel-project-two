@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\AboutController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\CertificateController;
+use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\EducationController;
 use App\Http\Controllers\Admin\ExperienceController;
 use App\Http\Controllers\Admin\FactController;
@@ -132,6 +133,10 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/review/delete/{id}', [ReviewController::class, 'delete'])->name('review-delete');
         Route::get('/review/inactive/{id}', [ReviewController::class, 'inactive'])->name('review-inactive');
         Route::get('/review/active/{id}', [ReviewController::class, 'active'])->name('review-active');
+
+
+        Route::get('user/contact', [ContactController::class, 'index'])->name('user-contact');
+        Route::get('user/contact/{id}', [ContactController::class, 'delete'])->name('user-contact-delete');
 
     });
 });

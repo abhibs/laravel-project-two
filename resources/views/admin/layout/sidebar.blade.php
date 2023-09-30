@@ -298,59 +298,21 @@
                         <li>
                             <a href="#sidebarTables" data-bs-toggle="collapse">
                                 <i class="mdi mdi-table"></i>
-                                <span> Tables </span>
+                                <span> User Contact </span>
                                 <span class="menu-arrow"></span>
                             </a>
                             <div class="collapse" id="sidebarTables">
                                 <ul class="nav-second-level">
                                     <li>
-                                        <a href="tables-basic.html">Basic Tables</a>
+                                        <a href="{{ route('user-contact') }}">All User Contact List</a>
                                     </li>
-                                    <li>
-                                        <a href="tables-datatables.html">Data Tables</a>
-                                    </li>
+
 
                                 </ul>
                             </div>
                         </li>
 
-                        <li>
-                            <a href="#sidebarCharts" data-bs-toggle="collapse">
-                                <i class="mdi mdi-poll"></i>
-                                <span> Charts </span>
-                                <span class="menu-arrow"></span>
-                            </a>
-                            <div class="collapse" id="sidebarCharts">
-                                <ul class="nav-second-level">
-                                    <li>
-                                        <a href="charts-apex.html">Apex Charts</a>
-                                    </li>
-                                    <li>
-                                        <a href="charts-flot.html">Flot Charts</a>
-                                    </li>
 
-                                </ul>
-                            </div>
-                        </li>
-
-                        <li>
-                            <a href="#sidebarMaps" data-bs-toggle="collapse">
-                                <i class="mdi mdi-map-outline"></i>
-                                <span> Maps </span>
-                                <span class="menu-arrow"></span>
-                            </a>
-                            <div class="collapse" id="sidebarMaps">
-                                <ul class="nav-second-level">
-                                    <li>
-                                        <a href="maps-google.html">Google Maps</a>
-                                    </li>
-                                    <li>
-                                        <a href="maps-vector.html">Vector Maps</a>
-                                    </li>
-
-                                </ul>
-                            </div>
-                        </li>
 
                     </ul>
 
