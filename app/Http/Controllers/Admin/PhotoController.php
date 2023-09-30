@@ -22,7 +22,7 @@ class PhotoController extends Controller
         $old_img = $request->old_image;
 
         if ($request->file('image')) {
-            unlink($old_img);
+            // unlink($old_img);
             $image = $request->file('image');
             $name_gen = hexdec(uniqid()) . '.' . $image->getClientOriginalExtension(); // 3434343443.jpg
 

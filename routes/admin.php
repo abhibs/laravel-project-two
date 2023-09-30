@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AboutController;
+use App\Http\Controllers\Admin\EducationController;
 use App\Http\Controllers\Admin\FactController;
 use App\Http\Controllers\Admin\NameController;
 use App\Http\Controllers\Admin\PhotoController;
@@ -70,6 +71,16 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/skill/delete/{id}', [SkillController::class, 'delete'])->name('skill-delete');
         Route::get('/skill/inactive/{id}', [SkillController::class, 'inactive'])->name('skill-inactive');
         Route::get('/skill/active/{id}', [SkillController::class, 'active'])->name('skill-active');
+
+
+        Route::get('/education/create', [EducationController::class, 'create'])->name('education-create');
+        Route::post('/education/store', [EducationController::class, 'store'])->name('education-store');
+        Route::get('/education', [EducationController::class, 'index'])->name('education');
+        Route::get('/education/edit/{id}', [EducationController::class, 'edit'])->name('education-edit');
+        Route::post('/education/update', [EducationController::class, 'update'])->name('education-update');
+        Route::get('/education/delete/{id}', [EducationController::class, 'delete'])->name('education-delete');
+        Route::get('/education/inactive/{id}', [EducationController::class, 'inactive'])->name('education-inactive');
+        Route::get('/education/active/{id}', [EducationController::class, 'active'])->name('education-active');
 
     });
 });

@@ -182,16 +182,16 @@
                         <li>
                             <a href="#sidebarAuth" data-bs-toggle="collapse">
                                 <i class="mdi mdi-account-circle-outline"></i>
-                                <span> Auth Pages </span>
+                                <span> Education </span>
                                 <span class="menu-arrow"></span>
                             </a>
                             <div class="collapse" id="sidebarAuth">
                                 <ul class="nav-second-level">
                                     <li>
-                                        <a href="auth-login.html">Log In</a>
+                                        <a href="{{ route('education-create') }}">Add Education</a>
                                     </li>
                                     <li>
-                                        <a href="auth-login-2.html">Log In 2</a>
+                                        <a href="{{ route('education') }}">All Education</a>
                                     </li>
 
                                 </ul>

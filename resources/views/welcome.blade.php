@@ -43,7 +43,7 @@
             <div class="profile">
                 <img src="{{ asset($photo->image) }}" alt="" class="img-fluid rounded-circle" width="104px"
                     height="104px">
-                <h1 class="text-light"><a href="index.html">{{ $name->name }}</a></h1>
+                <h1 class="text-light"><a href="{{ route('home') }}">{{ $name->name }}</a></h1>
                 <div class="social-links mt-3 text-center">
                     @foreach ($socials as $item)
                         <a href="{{ $item->url }}" target="_blank"><i class="{{ $item->icon }}"></i></a>
@@ -72,7 +72,7 @@
 
     <!-- ======= Hero Section ======= -->
     <section id="hero" class="d-flex flex-column justify-content-center align-items-center"
-        style="width: 100%; height: 100vh; background: url({{ asset($photo->image) }}) top center no-repeat;">
+        style="width: 100%; height: 100vh; background: url({{ asset($photo->image) }});">
         <div class="hero-container" data-aos="fade-in">
             <h1>{{ $name->name }}</h1>
             <p>I'm <span class="typed" data-typed-items="{{ $roles->implode('name', ', ') }}"></span></p>
@@ -232,26 +232,10 @@
 
                 <div class="section-title">
                     <h2>Resume</h2>
-                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit
-                        sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias
-                        ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
                 </div>
 
                 <div class="row">
                     <div class="col-lg-6" data-aos="fade-up">
-                        <h3 class="resume-title">Sumary</h3>
-                        <div class="resume-item pb-0">
-                            <h4>Alex Smith</h4>
-                            <p><em>Innovative and deadline-driven Graphic Designer with 3+ years of experience designing
-                                    and developing user-centered digital/print marketing material from initial concept
-                                    to final, polished deliverable.</em></p>
-                            <ul>
-                                <li>Portland par 127,Orlando, FL</li>
-                                <li>(123) 456-7891</li>
-                                <li>alice.barkley@example.com</li>
-                            </ul>
-                        </div>
-
                         <h3 class="resume-title">Education</h3>
                         <div class="resume-item">
                             <h4>Master of Fine Arts &amp; Graphic Design</h4>
