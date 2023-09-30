@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\FactController;
 use App\Http\Controllers\Admin\NameController;
 use App\Http\Controllers\Admin\PhotoController;
 use App\Http\Controllers\Admin\RoleController;
+use App\Http\Controllers\Admin\SkillController;
 use App\Http\Controllers\Admin\SocialController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminController;
@@ -59,6 +60,16 @@ Route::group(['prefix' => 'admin'], function () {
 
         Route::get('/fact', [FactController::class, 'index'])->name('fact');
         Route::post('/fact/update', [FactController::class, 'update'])->name('fact-update');
+
+
+        Route::get('/skill/create', [SkillController::class, 'create'])->name('skill-create');
+        Route::post('/skill/store', [SkillController::class, 'store'])->name('skill-store');
+        Route::get('/skill', [SkillController::class, 'index'])->name('skill');
+        Route::get('/skill/edit/{id}', [SkillController::class, 'edit'])->name('skill-edit');
+        Route::post('/skill/update', [SkillController::class, 'update'])->name('skill-update');
+        Route::get('/skill/delete/{id}', [SkillController::class, 'delete'])->name('skill-delete');
+        Route::get('/skill/inactive/{id}', [SkillController::class, 'inactive'])->name('skill-inactive');
+        Route::get('/skill/active/{id}', [SkillController::class, 'active'])->name('skill-active');
 
     });
 });

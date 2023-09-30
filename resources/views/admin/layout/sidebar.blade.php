@@ -161,16 +161,16 @@
                         <li>
                             <a href="#sidebarTickets" data-bs-toggle="collapse">
                                 <i class="mdi mdi-lifebuoy"></i>
-                                <span> Tickets </span>
+                                <span> Skills </span>
                                 <span class="menu-arrow"></span>
                             </a>
                             <div class="collapse" id="sidebarTickets">
                                 <ul class="nav-second-level">
                                     <li>
-                                        <a href="tickets-list.html">List</a>
+                                        <a href="{{ route('skill-create') }}">Add Skill</a>
                                     </li>
                                     <li>
-                                        <a href="tickets-detail.html">Detail</a>
+                                        <a href="{{ route('skill') }}">All Skills</a>
                                     </li>
                                 </ul>
                             </div>
