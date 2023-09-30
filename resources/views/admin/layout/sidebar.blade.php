@@ -234,19 +234,23 @@
                                 </ul>
                             </div>
                         </li>
+
+                        @php
+                            $projectcount = App\Models\Project::count();
+                        @endphp
                         <li>
                             <a href="#sidebarLayouts" data-bs-toggle="collapse">
                                 <i class="mdi mdi-cellphone-link"></i>
-                                <span class="badge bg-blue float-end">New</span>
-                                <span> Layouts </span>
+                                <span class="badge bg-blue float-end">{{ $projectcount }}</span>
+                                <span> Project </span>
                             </a>
                             <div class="collapse" id="sidebarLayouts">
                                 <ul class="nav-second-level">
                                     <li>
-                                        <a href="layouts-horizontal.html">Horizontal</a>
+                                        <a href="{{ route('project-create') }}">Add Project</a>
                                     </li>
                                     <li>
-                                        <a href="layouts-detached.html">Detached</a>
+                                        <a href="{{ route('project') }}">All Projects</a>
                                     </li>
 
                                 </ul>
