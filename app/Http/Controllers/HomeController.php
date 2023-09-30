@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\About;
+use App\Models\Certificate;
 use App\Models\Education;
 use App\Models\Experience;
 use App\Models\Fact;
@@ -26,7 +27,8 @@ class HomeController extends Controller
         $skills = Skill::where('status', 1)->get();
         $educations = Education::where('status', 1)->get();
         $experiences = Experience::where('status', 1)->get();
+        $certificates = Certificate::where('status', 1)->inRandomOrder()->get();
 
-        return view('welcome', compact('name', 'photo', 'roles', 'socials', 'about', 'fact', 'skills', 'educations', 'experiences'));
+        return view('welcome', compact('name', 'photo', 'roles', 'socials', 'about', 'fact', 'skills', 'educations', 'experiences', 'certificates'));
     }
 }

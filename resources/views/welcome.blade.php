@@ -272,7 +272,7 @@
         @php
             $projectdatas = App\Models\Project::where('status', 1)->get();
             $categories = App\Models\Category::orderBy('name', 'ASC')->get();
-
+            
         @endphp
 
         <!-- ======= Project Section ======= -->
@@ -338,55 +338,14 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
+                    @foreach ($certificates as $item)
+                        <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
 
-                        <img src="{{ asset('user/assets/img/certifacate/certificate-1.jpg') }}" width="350"
-                            height="350" alt="">
+                            <img src="{{ asset($item->image) }}" width="350" height="350" alt="">
 
-                    </div>
+                        </div>
+                    @endforeach
 
-                    <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
-
-                        <img src="{{ asset('user/assets/img/certifacate/certificate-1.jpg') }}" width="350"
-                            height="350" alt="">
-
-                    </div>
-                    <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
-
-                        <img src="{{ asset('user/assets/img/certifacate/certificate-1.jpg') }}" width="350"
-                            height="350" alt="">
-
-                    </div>
-                    <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
-
-                        <img src="{{ asset('user/assets/img/certifacate/certificate-1.jpg') }}" width="350"
-                            height="350" alt="">
-
-                    </div>
-                    <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
-
-                        <img src="{{ asset('user/assets/img/certifacate/certificate-1.jpg') }}" width="350"
-                            height="350" alt="">
-
-                    </div>
-                    <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
-
-                        <img src="{{ asset('user/assets/img/certifacate/certificate-1.jpg') }}" width="350"
-                            height="350" alt="">
-
-                    </div>
-                    <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
-
-                        <img src="{{ asset('user/assets/img/certifacate/certificate-1.jpg') }}" width="350"
-                            height="350" alt="">
-
-                    </div>
-                    <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
-
-                        <img src="{{ asset('user/assets/img/certifacate/certificate-1.jpg') }}" width="350"
-                            height="350" alt="">
-
-                    </div>
 
                 </div>
 
@@ -453,7 +412,7 @@
                             </div>
                         </div><!-- End testimonial item -->
 
-                        
+
 
                     </div>
                     <div class="swiper-pagination"></div>
